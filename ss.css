@@ -1,0 +1,168 @@
+body{
+    background: linear-gradient(135deg,#00C4FF,#9D1BB2);
+    height: 650px;
+}
+
+
+.box {
+    display: flex;
+    margin-left:260px;
+    margin-top: 0px;
+
+
+}
+
+.box .inner {
+    width: 400px;
+    height: 200px;
+    line-height: 200px;
+    font-size: 5em;
+    font-family: sans-serif;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.box .inner:first-child {
+    background-color: indianred;
+    color: darkred;
+    transform-origin: right;
+    transform: perspective(100px) rotateY(-15deg);
+}
+
+.box .inner:last-child {
+    background-color: lightcoral;
+    color: antiquewhite;
+    transform-origin: left;
+    transform: perspective(100px) rotateY(15deg);
+}
+
+.box .inner span {
+    position: absolute;
+    animation: marquee 5s linear infinite;
+}
+
+.box .inner:first-child span {
+    animation-delay: 2.5s;
+    left: -100%;
+}
+
+@keyframes marquee {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: -100%;
+    }
+}
+
+
+
+
+
+
+
+.anim {
+    height: 300px;
+    width: 300px;
+    animation-name: loader;
+    animation-duration: 15s;
+    margin-top: 30px;
+    margin-left: 510px;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    position: absolute;
+
+
+
+}
+
+@keyframes loader {
+    0% {
+        background-image: url("shiv.jpg");
+        background-repeat: no-repeat;
+        background-size: 300px 300px;
+        border-radius: 50% 50% 50% 50% ;
+        transform: rotate(0deg);
+
+    }
+    25% {
+        background-image: url("jain.jpg");
+        background-repeat: no-repeat;
+        background-size: 300px 300px;
+        border-radius: 50% 50% 50% 50%;
+        transform: rotate(90deg);
+    }
+    50% {
+        background-image: url("baba.jpg");
+        background-repeat: no-repeat;
+        background-size: 300px 300px;;
+        border-radius: 50% 50% 50% 50%;
+        transform: rotate(180deg);
+    }
+    75% {
+        background-image: url("pra.jpg");
+        background-repeat: no-repeat;
+        background-size: 300px 300px;;
+        border-radius: 50% 50% 50% 50%;
+        transform: rotate(270deg);
+
+    }
+    100% {
+        background-image: url("shiv.jpg");
+        background-repeat: no-repeat;
+        background-size: 300px 300px;
+        border-radius: 50% 50% 50% 50%;
+        transform:rotate(360deg);
+    }
+}
+
+.button {
+    border: none;
+    color: white;
+    height: 400px;
+    width: 400px;
+    text-align: center;
+    font-size: 20px;
+    opacity: 0.8;
+    text-decoration: none;
+    cursor: pointer;
+    float: left;
+    position: absolute;
+    border-radius: 20% 20% 20% 20%;
+    margin-left: 30px;
+    background: linear-gradient(135deg,#3b444b,#0e1111);
+    box-shadow: 0 10px #999;
+}
+
+.button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 6px #666;
+    transform: translateY(4px);
+}
+
+.btn {
+    border: none;
+    color: white;
+    height: 400px;
+    width: 400px;
+    text-align: center;
+    font-size: 20px;
+    opacity: 0.8;
+    transition: 0.3s;
+    text-decoration: none;
+    cursor: pointer;
+   display: inline-block;
+    position: absolute;
+    margin-left: 67%;
+    border-radius: 20% 20% 20% 20%;
+    background: linear-gradient(135deg,#3b444b,#0e1111);
+    box-shadow: 0 10px #999;
+}
+
+.btn:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
